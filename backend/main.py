@@ -8,7 +8,17 @@ app = Flask(__name__)
 def index(name=None):
     return "Hello World"
 
- 
+@app.route("/signup")
+def signup():
+    return "Sign up"
+
+@app.route("/login")
+def login():
+    return "Login"
+    
+@app.route("/authenticated_view")
+def view():
+    return "authenticated view"
 if __name__ == '__main__':
   app.run(debug=True)
   
